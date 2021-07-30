@@ -1,0 +1,2 @@
+module FoundryHelper
+end
