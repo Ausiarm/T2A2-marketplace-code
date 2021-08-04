@@ -29,5 +29,19 @@
   <%= image_tag @listing.avatar %>
 </p>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<button data-stripe="payment">Buy<%= number_to_currency(@listing.price) %></button>
 <%= link_to 'Back', listings_path %>
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  document.querySelector("[data-stripe='payment']").addEventListener("click", () => {
+    const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :public_key) %>");
+    stripe.redirectToCheckout({
+      sessionId: "<%= @session_id %>"
+    });
+  });
+</script>
+
+
+ <%= link_to 'Edit', edit_listing_path(@listing) %> 
+
