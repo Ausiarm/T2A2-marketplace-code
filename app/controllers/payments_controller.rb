@@ -5,12 +5,12 @@ class PaymentsController < ApplicationController
     end 
 
     def webhook 
-        payment_id = params[:data][:obect][:payment_intent]
+        payment_id = params[:data][:object][:payment_intent]
         payment = Stripe::PaymentIntent.retrieve(payment_id)
-        event_id = payment.metadata.event_id
-        user_id = payment.metadata.user_id
-        p "Event id " + event_id
-        p "user id " + user_id
+        listing_id = payment.metadata.listing_id
+        # user_id = payment.metadata.user_id
+        p "Listing id " + listing_id
+        # p "user id " + user_id
         render plain: "Success"
     end
 

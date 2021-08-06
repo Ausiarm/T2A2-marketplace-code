@@ -1,5 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, only: [:show]
+  before_action :authenticate_user!
 
   # GET /listings or /listings.json
   def index
@@ -21,8 +23,8 @@ class ListingsController < ApplicationController
         }],
         payment_intent_data: {
           metadata: {
-            event_id: @listing.id,
-            user_id: current_user.id
+            listing_id: @listing.id,
+            # user_id: current_user.id
           }
         },
         success_url: "#{root_url}payments/success?eventID=#{@listing.id}",
