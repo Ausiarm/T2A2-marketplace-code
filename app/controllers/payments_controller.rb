@@ -16,6 +16,9 @@ class PaymentsController < ApplicationController
 
         new_order = Order.create!(:listing_id => @listing_id, :user_id => @user_id)
         p "New Order" + new_order.to_s
+
+        new_payment = Payment.create!(:price => :amount, :user_id => @user_id)
+        p "New payment" + new_payment.to_s        
        
     end
 

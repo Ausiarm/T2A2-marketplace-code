@@ -1,0 +1,10 @@
+<div class="col-md-4">
+    <div class="card text-center card-height" style="width: 18rem;">
+        <%= image_tag listing.avatar, class: "card-img-top" %>
+            <div class="card-body">
+                <h5 class="card-title"><%= listing.name%></h5>
+                <p class="card-text">$<%= listing.price%></p>
+                <%= link_to "See More", listing_path(listing.id), method: :get, class: "btn btn-primary btn-center"%>
+            </div>
+    </div>
+</div>
