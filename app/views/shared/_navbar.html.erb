@@ -14,8 +14,8 @@
           My Stuff
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">My Foundry</a>
-          <a class="dropdown-item" href="#">FAQ's</a>
+          <%= link_to "My Foundry", orders_path, method: :get, :class => "nav-link" %>
+          <%= link_to "FAQ's", foundry_page_path, method: :get, :class => "nav-link" %>
         </div>
       </li>
       <li class="nav-item active">

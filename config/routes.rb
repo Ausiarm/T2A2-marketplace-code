@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   get 'foundry/page'
   resources :listings
   devise_for :users

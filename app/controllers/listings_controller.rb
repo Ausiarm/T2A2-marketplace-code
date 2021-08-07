@@ -24,7 +24,7 @@ class ListingsController < ApplicationController
         payment_intent_data: {
           metadata: {
             listing_id: @listing.id,
-            # user_id: current_user.id
+            user_id: current_user.id
           }
         },
         success_url: "#{root_url}payments/success?eventID=#{@listing.id}",
