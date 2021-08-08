@@ -14,7 +14,11 @@
           My Stuff
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "My Foundry", orders_path, method: :get, :class => "nav-link" %>
+          <% if user_signed_in?%>
+            <%= link_to "My Foundry", orders_path, method: :get, :class => "nav-link" %>
+          <% else %>
+            <%= link_to "My Foundry", restricted_path, method: :get, :class => "nav-link" %>
+          <% end %>
           <%= link_to "FAQ's", foundry_page_path, method: :get, :class => "nav-link" %>
         </div>
       </li>
@@ -24,6 +28,8 @@
       <li class="nav-item active">
         <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "nav-link" %>
+        <% else %>
+          <%= link_to "Sign In", new_user_session_path, method: :get, :class => "nav-link" %>
         <% end %>
       </li>
     </ul>

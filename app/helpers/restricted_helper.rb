@@ -1,0 +1,2 @@
+module RestrictedHelper
+end
