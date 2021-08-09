@@ -1,2 +1,8 @@
 <h1>Payment successful!</h1>
+
+<p>You now have access to <%= @listing.name %> </p> 
+
+<p>Here's your receipt for your records:</p>
+<%=link_to "Receipt", @purchase.receipt_url, target: :_blank %>
+<br>
 <%= link_to "Go to The Foundry", foundry_page_path %>

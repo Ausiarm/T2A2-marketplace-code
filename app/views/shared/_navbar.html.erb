@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">FitFoundation</a>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: background: linear-gradient(to right, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.5));">
+  <a class="navbar-brand" href="/">Themelio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse d-flex bd-highlight" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "The Foundry", foundry_page_path, class: "nav-link" %>
+        <%= link_to "The Foundry", foundry_page_path, class: "nav-link"%>
       </li>
       
-      <li class="nav-item dropdown active">
+      <li class="nav-item dropdown active nav-color">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           My Stuff
         </a>
@@ -22,10 +22,10 @@
           <%= link_to "FAQ's", foundry_page_path, method: :get, :class => "nav-link" %>
         </div>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active nav-color">
         <a class="nav-link" href="#">Represent <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active d-flex bd-highlight float-right nav-color">
         <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "nav-link" %>
         <% else %>

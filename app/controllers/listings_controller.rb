@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: %i[ show edit update destroy ]
   skip_before_action :verify_authenticity_token, only: [:show]
-  before_action :authenticate_user!
+  before_action :authenticate_user! 
 
   # GET /listings or /listings.json
   def index
@@ -32,6 +32,7 @@ class ListingsController < ApplicationController
       )
 
       @session_id = session.id
+      pp session
   end
 
   # GET /listings/new

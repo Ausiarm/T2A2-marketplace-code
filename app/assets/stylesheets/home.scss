@@ -2,7 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.jumbotron {
+    background-image: url(mountain.png);
+    background-size: cover;
+    height: 600px;
+}
+.row {
+    height: 200px;
+}
+.jumbo-title {
+    text-align: center;
+    font-size: 90px;
+    color: #FCF8E8;
+}
+.jumbotron p {
+    text-align: center;
+    font-size: 30px;
+    color: #FCF8E8;
+}
 .home-image {
     width: 100%;
     height: 100%;
+}
+
+.mt {
+    margin-top: 400px !important;
 }

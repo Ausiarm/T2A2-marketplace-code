@@ -1,3 +1,27 @@
 // Place all the styles related to the foundry controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.bg-primary {
+    background-color: black !important;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #5ee7df;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5))
+  }
+
+.card-title {
+    color:rgba(37, 117, 252, 0.8)
+}
+
+.card-text {
+    color:rgba(37, 117, 252, 0.8)
+}

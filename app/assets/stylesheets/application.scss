@@ -16,3 +16,17 @@
 
  @import "bootstrap";
 
+ .big-body {
+    /* fallback for old browsers */
+    background: #accbee;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(172, 203, 238, 0.5), rgba(0, 231, 240, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(172, 203, 238, 0.5), rgba(0, 231, 240, 0.5))
+  }
+
+ .a {
+     color: #FCF8E8
+ }

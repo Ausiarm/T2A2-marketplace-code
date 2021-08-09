@@ -1,20 +1,24 @@
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-6">
-            <h1 class="display-4">Themelio</h1>
-            <p class="lead">I am all that I give. What lies ahead is, by nature, beyond my control. I will accept this knowing that I have built a foundation strong enough to bear the weight of any burden, come what may.</p>
-            <hr class="my-4">
-            <p class="lead">
-                <%= link_to "Start Building", new_listing_path, method: :get, class: "btn btn-primary btn-lg" %>
-            </p>
-            <p class="lead">
-                <%= link_to "The Foundry", foundry_page_path, method: :get, class: "btn btn-primary btn-lg" %>
-            </p>
+<span class="align-middle">
+    <div class="jumbotron shadow p-3 mb-5 bg-white rounded position-relative">
+    <div class="col">
+        <div class="row justify-content-center">
+            <h1 class="jumbo-title">Themelio</h1>
         </div>
-         
-        <div class="col-md-6">
-            <%= image_tag "logo", class: "home-image" %>
+        <br>
+        <div class="row">
+            <p class="lead body-text">I am all that I give. What lies ahead is, by nature, beyond my control. I will accept this knowing that I have built a foundation strong enough to bear the weight of any burden, come what may.</p>
+        </div>
+        <br>
+        <div class="row">
+            <hr class="my-4">
+            <p class="lead col-md-6">
+                <%= link_to "Start Building", new_listing_path, method: :get, class: "btn btn-primary btn-lg float-left" %>
+            </p>
+            <p class="lead col-md-6">
+                <%= link_to "The Foundry", foundry_page_path, method: :get, class: "btn btn-primary btn-lg float-right" %>
+            </p>
         </div>
     </div>
-</div>
+    </div>
+</span>
 
