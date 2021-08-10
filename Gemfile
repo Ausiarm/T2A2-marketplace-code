@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # custom gems
 gem 'bootstrap', '~> 4.6.0'
 gem 'ultrahook', '~> 0.1.4'
+gem 'pundit', '~> 2.1.0'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'

@@ -22,9 +22,10 @@
           <%= link_to "FAQ's", foundry_page_path, method: :get, :class => "nav-link" %>
         </div>
       </li>
-      <li class="nav-item active nav-color">
+      <%# will include the merch store in a later iteration %>
+      <%# <li class="nav-item active nav-color">
         <a class="nav-link" href="#">Represent <span class="sr-only">(current)</span></a>
-      </li>
+      </li> %>
       <li class="nav-item active d-flex bd-highlight float-right nav-color">
         <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "nav-link" %>

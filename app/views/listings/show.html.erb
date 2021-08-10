@@ -42,7 +42,12 @@
 
 <%= link_to 'Back', foundry_page_path, class: "btn btn-primary btn-center" %>
 
-<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary btn-center" %> 
+<%# limit the user from being able to access the edit button if they were not the creator of the object or an admin %>
+<% if policy(@listing).edit? %>
+    <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary btn-center" %> 
+<% end %>
+
+
 
 
 

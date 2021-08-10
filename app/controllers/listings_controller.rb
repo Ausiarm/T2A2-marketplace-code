@@ -42,6 +42,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/1/edit
   def edit
+    authorize @listing
   end
 
   # POST /listings or /listings.json
@@ -78,6 +79,17 @@ class ListingsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to listings_url, notice: "Listing was successfully destroyed." }
       format.json { head :no_content }
+    end
+
+    @listing = Listing.find(params[:id])
+    authorize @listing
+    
+    if @listing.destroy
+      flash[:notice] = "\"#{@listing.name}\" was successfully deleted."
+      redirect_to foundry_path
+    else
+      flash.now[:alert] = "There was an error deleting the wiki."
+      render :show
     end
   end
 
