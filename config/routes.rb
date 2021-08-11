@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :orders
-  get 'foundry/page'
+  get 'foundry/page', to: "foundry#page"
   resources :listings
   devise_for :users
   root 'home#page'
